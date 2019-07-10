@@ -8,7 +8,9 @@ ext.vers = [
   jax_persistence: '1.0.2',
   antlr4         : '4.7.1',
   immutables     : '2.6.3',
+  jackson        : '2.9.9',
   mybatis        : '3.4.6',
+  classgraph     : '4.2.8',
   springboot     : '2.1.6.RELEASE',
   junit          : '4.12'
 ]
