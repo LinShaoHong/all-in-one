@@ -10,6 +10,7 @@ ext.vers = [
   immutables     : '2.6.3',
   jackson        : '2.9.9',
   mybatis        : '3.4.6',
+  jsoup          : '1.12.1',
   classgraph     : '4.2.8',
   springboot     : '2.1.6.RELEASE',
   junit          : '4.12'
