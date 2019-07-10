@@ -1,0 +1,19 @@
+group 'com.github.sun'
+
+version = '1.0.0-SNAPSHOT'
+
+ext.rootName = "sun"
+
+ext.vers = [
+  jax_persistence: '1.0.2',
+  antlr4         : '4.7.1',
+  immutables     : '2.6.3',
+  mybatis        : '3.4.6',
+  springboot     : '2.1.6.RELEASE',
+  junit          : '4.12'
+]
+
+apply from: rootProject.file("buildscript/gradle/root_idea.gradle")
+apply from: rootProject.file("buildscript/gradle/root_maven.gradle")
+apply from: rootProject.file("buildscript/gradle/root_immutables.gradle")
+apply from: rootProject.file("buildscript/gradle/root_springboot.gradle")

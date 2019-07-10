@@ -1,0 +1,6 @@
+[submodule "foundation"]
+	path = foundation
+	url = ../foundation.git
+[submodule "buildscript"]
+	path = buildscript
+	url = ../buildscript.git
