@@ -3,10 +3,10 @@
 	url = ../buildscript.git
 [submodule "foundation"]
 	path = foundation
-	url = ../foundation.git
+	url = ../buildscript.git
 [submodule "backend"]
 	path = backend
 	url = ../backend.git
 [submodule "front"]
 	path = front
-	url = git@github.com:LinShaoHong/front.git
+	url = ../front.git
