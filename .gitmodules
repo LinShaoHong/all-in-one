@@ -4,9 +4,3 @@
 [submodule "backend"]
 	path = backend
 	url = ../backend.git
-[submodule "foundation"]
-	path = foundation
-	url = ../foundation.git
-[submodule "front"]
-	path = front
-	url = ../front.git
