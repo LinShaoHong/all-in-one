@@ -5,12 +5,10 @@ import com.fasterxml.jackson.core.type.TypeReference;
 import com.fasterxml.jackson.databind.JavaType;
 import com.fasterxml.jackson.databind.JsonNode;
 import com.fasterxml.jackson.databind.ObjectMapper;
+import com.fasterxml.jackson.databind.node.MissingNode;
 
 import java.io.IOException;
-import java.util.Collections;
-import java.util.List;
-import java.util.Map;
-import java.util.Set;
+import java.util.*;
 import java.util.function.Function;
 import java.util.stream.Collectors;
 
@@ -84,7 +82,7 @@ public class JSON {
   }
 
   public static <T> List<T> deserializeAsList(String json, Class<T> clazz) {
-    JavaType type = mapper.getTypeFactory().constructParametrizedType(List.class, List.class, clazz);
+    JavaType type = mapper.getTypeFactory().constructParametricType(List.class, List.class, clazz);
     try {
       return mapper.readValue(json, type);
     } catch (IOException ex) {
@@ -93,12 +91,12 @@ public class JSON {
   }
 
   public static <T> List<T> deserializeAsList(Object object, Class<T> clazz) {
-    JavaType type = mapper.getTypeFactory().constructParametrizedType(List.class, List.class, clazz);
+    JavaType type = mapper.getTypeFactory().constructParametricType(List.class, List.class, clazz);
     return mapper.convertValue(object, type);
   }
 
   public static <T> Set<T> deserializeAsSet(String json, Class<T> clazz) {
-    JavaType type = mapper.getTypeFactory().constructParametrizedType(Set.class, Set.class, clazz);
+    JavaType type = mapper.getTypeFactory().constructParametricType(Set.class, Set.class, clazz);
     try {
       return mapper.readValue(json, type);
     } catch (IOException ex) {
@@ -107,7 +105,7 @@ public class JSON {
   }
 
   public static <T> Set<T> deserializeAsSet(Object object, Class<T> clazz) {
-    JavaType type = mapper.getTypeFactory().constructParametrizedType(Set.class, Set.class, clazz);
+    JavaType type = mapper.getTypeFactory().constructParametricType(Set.class, Set.class, clazz);
     return mapper.convertValue(object, type);
   }
 
@@ -147,5 +145,151 @@ public class JSON {
 
   public static <B> Map<String, B> deserializeAsMap(String json, Class<B> valueClass) {
     return deserializeAsMap(json, valueClass, v -> v);
+  }
+
+  public static Value newParser(JsonNode node, String... path) {
+    return Value.of(node, path);
+  }
+
+  public static class Value {
+    private final JsonNode node;
+    private final Path path;
+
+    private Value(JsonNode node, Path path) {
+      this.node = node;
+      this.path = path;
+    }
+
+    public static Value of(JsonNode node, String... path) {
+      return new Value(node, pathOf(path));
+    }
+
+    public JsonNode raw() {
+      return node;
+    }
+
+    public boolean hasValue() {
+      return node != null && !node.isMissingNode() && !node.isNull();
+    }
+
+    public Value get(String field) {
+      JsonNode n = node.get(field);
+      if (n == null) {
+        n = MissingNode.getInstance();
+      }
+      return new Value(n, new Path(field, path));
+    }
+
+    public String asText(String defaultValue) {
+      return hasValue() ? node.textValue() : defaultValue;
+    }
+
+    public String asText() {
+      if (!node.isTextual()) {
+        throw error("Expected String but found: " + node.getNodeType(), path);
+      }
+      return node.textValue();
+    }
+
+    public int asInt(int defaultValue) {
+      return hasValue() ? node.intValue() : defaultValue;
+    }
+
+    public int asInt() {
+      if (!node.isInt()) {
+        throw error("Expected Integer but found: " + node.getNodeType(), path);
+      }
+      return node.intValue();
+    }
+
+    public long asLong(long defaultValue) {
+      return hasValue() ? node.intValue() : defaultValue;
+    }
+
+    public long asLong() {
+      if (!node.isLong()) {
+        throw error("Expected Long but found: " + node.getNodeType(), path);
+      }
+      return node.longValue();
+    }
+
+    public boolean asBoolean(boolean defaultValue) {
+      return hasValue() ? node.booleanValue() : defaultValue;
+    }
+
+    public boolean asBoolean() {
+      if (!node.isBoolean()) {
+        throw error("Expected Boolean but found: " + node.getNodeType(), path);
+      }
+      return node.booleanValue();
+    }
+
+    public Iterable<Value> asArray() {
+      if (!node.isArray()) {
+        throw error("Expected Array but found: " + node.getNodeType(), path);
+      }
+      Iterator<JsonNode> it = node.iterator();
+      return () -> new Iterator<Value>() {
+        private int i = 0;
+
+        @Override
+        public boolean hasNext() {
+          return it.hasNext();
+        }
+
+        @Override
+        public Value next() {
+          return new Value(it.next(), new Path(String.valueOf(++i), path));
+        }
+      };
+    }
+
+    public <T> T as(Class<T> c) {
+      if (!node.isObject()) {
+        throw error("Expected Object but found: " + node.getNodeType(), path);
+      }
+      return deserialize(node, c);
+    }
+  }
+
+  private static IllegalArgumentException error(String message, Path path) {
+    if (path == null) {
+      return new IllegalArgumentException(message);
+    }
+    // print path
+    PrependStringBuilder sb = new PrependStringBuilder();
+    Path p = path;
+    while (p.parent != null) {
+      sb.prepend(p.name).prepend(".");
+      p = p.parent;
+    }
+    sb.prepend(p.name);
+    // print message
+    sb.append(": ").append(message);
+    return new IllegalArgumentException(sb.toString());
+  }
+
+  private static Path pathOf(String... path) {
+    Path p = null;
+    if (path != null && path.length > 0) {
+      for (String n : path) {
+        p = new Path(n, p);
+      }
+    }
+    return p;
+  }
+
+  private static class Path {
+    public final String name;
+    public final Path parent;
+
+    private Path(String name, Path parent) {
+      this.name = name;
+      this.parent = parent;
+    }
+
+    public Path sub(String name) {
+      return new Path(name, this);
+    }
   }
 }

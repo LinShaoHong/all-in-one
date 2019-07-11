@@ -9,4 +9,4 @@
 	url = ../backend.git
 [submodule "front"]
 	path = front
-	url = ../front.git
+	url = git@github.com:LinShaoHong/front.git
