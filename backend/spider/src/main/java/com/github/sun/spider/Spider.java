@@ -4,10 +4,6 @@ import com.fasterxml.jackson.databind.JsonNode;
 
 import java.util.List;
 
-/**
- * @Author LinSH
- * @Date: 12:00 AM 2019-07-11
- */
 public interface Spider {
   /**
    * 开始采集
