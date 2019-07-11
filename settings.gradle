@@ -8,11 +8,16 @@ def defineSubProject(name, path) {
 
 defineSubProject('sql', 'foundation/common/sql')
 defineSubProject('boot', 'foundation/common/boot')
-defineSubProject('test', 'foundation/common/test')
+
+defineSubProject('rest', 'foundation/common/rest')
+
 defineSubProject('mybatis', 'foundation/common/mybatis')
 defineSubProject('modeling', 'foundation/common/modeling')
 defineSubProject('expression', 'foundation/common/expression')
 
+defineSubProject('test', 'foundation/common/test')
+
+defineSubProject('demo-spring-rest', 'foundation/demo/spring/rest-server')
 defineSubProject('demo-spring-foo', 'foundation/demo/spring/foo-server')
 defineSubProject('demo-spring-bar', 'foundation/demo/spring/bar-server')
 defineSubProject('demo-spring-eureka', 'foundation/demo/spring/eureka-server')

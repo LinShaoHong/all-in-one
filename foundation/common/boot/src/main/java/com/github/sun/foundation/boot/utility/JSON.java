@@ -1,4 +1,4 @@
-package com.github.sun.foundation.boot;
+package com.github.sun.foundation.boot.utility;
 
 import com.fasterxml.jackson.core.JsonProcessingException;
 import com.fasterxml.jackson.core.type.TypeReference;
@@ -6,6 +6,7 @@ import com.fasterxml.jackson.databind.JavaType;
 import com.fasterxml.jackson.databind.JsonNode;
 import com.fasterxml.jackson.databind.ObjectMapper;
 import com.fasterxml.jackson.databind.node.MissingNode;
+import com.github.sun.foundation.boot.json.ObjectMapperConfigurator;
 
 import java.io.IOException;
 import java.util.*;
@@ -19,7 +20,16 @@ import java.util.stream.Collectors;
 public class JSON {
   private static final ObjectMapper mapper = new ObjectMapper();
 
-  public ObjectMapper getMapper() {
+  static {
+    Scanner scanner = Scanner.create(Packages.group(JSON.class));
+    scanner.getClassesWithInterface(ObjectMapperConfigurator.class)
+      .forEach(v -> v.getInstance().config(mapper));
+  }
+
+  private JSON() {
+  }
+
+  public static ObjectMapper getMapper() {
     return mapper;
   }
 
@@ -147,21 +157,21 @@ public class JSON {
     return deserializeAsMap(json, valueClass, v -> v);
   }
 
-  public static Value newParser(JsonNode node, String... path) {
-    return Value.of(node, path);
+  public static Valuer newValuer(JsonNode node, String... path) {
+    return Valuer.of(node, path);
   }
 
-  public static class Value {
+  public static class Valuer {
     private final JsonNode node;
     private final Path path;
 
-    private Value(JsonNode node, Path path) {
+    private Valuer(JsonNode node, Path path) {
       this.node = node;
       this.path = path;
     }
 
-    public static Value of(JsonNode node, String... path) {
-      return new Value(node, pathOf(path));
+    public static Valuer of(JsonNode node, String... path) {
+      return new Valuer(node, pathOf(path));
     }
 
     public JsonNode raw() {
@@ -172,12 +182,12 @@ public class JSON {
       return node != null && !node.isMissingNode() && !node.isNull();
     }
 
-    public Value get(String field) {
+    public Valuer get(String field) {
       JsonNode n = node.get(field);
       if (n == null) {
         n = MissingNode.getInstance();
       }
-      return new Value(n, new Path(field, path));
+      return new Valuer(n, new Path(field, path));
     }
 
     public String asText(String defaultValue) {
@@ -224,12 +234,12 @@ public class JSON {
       return node.booleanValue();
     }
 
-    public Iterable<Value> asArray() {
+    public Iterable<Valuer> asArray() {
       if (!node.isArray()) {
         throw error("Expected Array but found: " + node.getNodeType(), path);
       }
       Iterator<JsonNode> it = node.iterator();
-      return () -> new Iterator<Value>() {
+      return () -> new Iterator<Valuer>() {
         private int i = 0;
 
         @Override
@@ -238,8 +248,8 @@ public class JSON {
         }
 
         @Override
-        public Value next() {
-          return new Value(it.next(), new Path(String.valueOf(++i), path));
+        public Valuer next() {
+          return new Valuer(it.next(), new Path(String.valueOf(++i), path));
         }
       };
     }
