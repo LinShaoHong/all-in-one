@@ -1,12 +1,6 @@
 [submodule "buildscript"]
 	path = buildscript
 	url = ../buildscript.git
-[submodule "foundation"]
-	path = foundation
-	url = ../foundation.git
 [submodule "backend"]
 	path = backend
 	url = ../backend.git
-[submodule "front"]
-	path = front
-	url = ../front.git
