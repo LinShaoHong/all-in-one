@@ -8,13 +8,9 @@ def defineSubProject(name, path) {
 
 defineSubProject('sql', 'foundation/common/sql')
 defineSubProject('boot', 'foundation/common/boot')
-
 defineSubProject('rest', 'foundation/common/rest')
-
 defineSubProject('mybatis', 'foundation/common/mybatis')
-defineSubProject('modeling', 'foundation/common/modeling')
 defineSubProject('expression', 'foundation/common/expression')
-
 defineSubProject('test', 'foundation/common/test')
 
 defineSubProject('demo-spring-rest', 'foundation/demo/spring/rest-server')
