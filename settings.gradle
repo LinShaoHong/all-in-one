@@ -10,6 +10,7 @@ defineSubProject('sql', 'foundation/common/sql')
 defineSubProject('boot', 'foundation/common/boot')
 defineSubProject('rest', 'foundation/common/rest')
 defineSubProject('mybatis', 'foundation/common/mybatis')
+defineSubProject('quartz', 'foundation/common/quartz')
 defineSubProject('expression', 'foundation/common/expression')
 defineSubProject('test', 'foundation/common/test')
 
@@ -19,6 +20,12 @@ defineSubProject('demo-spring-bar', 'foundation/demo/spring/bar-server')
 defineSubProject('demo-spring-eureka', 'foundation/demo/spring/eureka-server')
 defineSubProject('demo-spring-zuul', 'foundation/demo/spring/zuul-server')
 
-defineSubProject('admin', 'backend/admin')
-defineSubProject('spider', 'backend/spider')
+defineSubProject('spider-rest', 'backend/spider/rest')
+defineSubProject('spider-service', 'backend/spider/service')
+defineSubProject('spider-contract', 'backend/spider/contract')
+
+defineSubProject('picture-rest', 'backend/picture/rest')
+defineSubProject('picture-spider', 'backend/picture/spider')
+defineSubProject('picture-service', 'backend/picture/service')
+defineSubProject('picture-contract', 'backend/picture/contract')
 
