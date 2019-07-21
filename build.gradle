@@ -16,6 +16,7 @@ ext.vers = [
   postgresql     : '42.2.6',
   druid          : '1.1.19',
   jsoup          : '1.12.1',
+  guava          : '28.0-jre',
   quartz         : '2.3.1',
   htmlcleaner    : '2.22',
   classgraph     : '4.2.8',
