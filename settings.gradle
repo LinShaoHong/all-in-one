@@ -21,10 +21,13 @@ defineSubProject('demo-spring-eureka', 'foundation/demo/spring/eureka-server')
 defineSubProject('demo-spring-zuul', 'foundation/demo/spring/zuul-server')
 
 defineSubProject('bridge-console', 'backend/bridge/console')
+defineSubProject('bridge-whispered-rest', 'backend/bridge/whispered/rest')
 
 defineSubProject('spider-rest', 'backend/spider/rest')
 defineSubProject('spider-service', 'backend/spider/service')
 defineSubProject('spider-contract', 'backend/spider/contract')
+
+defineSubProject('layout-contract', 'backend/layout/contract')
 
 defineSubProject('image-rest', 'backend/image/rest')
 defineSubProject('image-spider', 'backend/image/spider')
