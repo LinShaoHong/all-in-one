@@ -17,6 +17,8 @@ ext.vers = [
   druid          : '1.1.19',
   jsoup          : '1.12.1',
   guava          : '28.0-jre',
+  caffeine       : '2.8.0',
+  jpinyin        : '1.1.8',
   quartz         : '2.3.1',
   htmlcleaner    : '2.22',
   classgraph     : '4.2.8',

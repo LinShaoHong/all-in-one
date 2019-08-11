@@ -27,6 +27,8 @@ defineSubProject('spider-rest', 'backend/spider/rest')
 defineSubProject('spider-service', 'backend/spider/service')
 defineSubProject('spider-contract', 'backend/spider/contract')
 
+defineSubProject('layout-rest', 'backend/layout/rest')
+defineSubProject('layout-service', 'backend/layout/service')
 defineSubProject('layout-contract', 'backend/layout/contract')
 
 defineSubProject('image-rest', 'backend/image/rest')
