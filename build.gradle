@@ -1,17 +1,18 @@
 group 'com.github.sun'
-
 version = '1.0.0-SNAPSHOT'
-
 ext.rootName = "sun"
-
 ext.vers = [
+  springboot     : '2.1.6.RELEASE',
+  spring         : '5.1.8.RELEASE',
+  mybatis        : '3.4.6',
+  mybatis_spring : '2.0.2',
   jax_persistence: '1.0.2',
+  springfox      : '2.7.0',
+  swagger2       : '1.5.13',
   antlr4         : '4.7.1',
   immutables     : '2.6.3',
   jackson        : '2.9.9',
   lombok         : '1.18.8',
-  mybatis        : '3.4.6',
-  mybatis_spring : '2.0.2',
   mysql          : '8.0.16',
   postgresql     : '42.2.6',
   druid          : '1.1.19',
@@ -23,12 +24,13 @@ ext.vers = [
   htmlcleaner    : '2.22',
   classgraph     : '4.2.8',
   hanlp          : 'portable-1.7.4',
-  springboot     : '2.1.6.RELEASE',
-  spring         : '5.1.8.RELEASE',
   junit          : '4.12'
 ]
 
 apply from: rootProject.file("buildscript/gradle/root_idea.gradle")
 apply from: rootProject.file("buildscript/gradle/root_maven.gradle")
+apply from: rootProject.file("buildscript/gradle/root_lombok.gradle")
+apply from: rootProject.file("buildscript/gradle/root_swagger.gradle")
+apply from: rootProject.file("buildscript/gradle/root_validation.gradle")
 apply from: rootProject.file("buildscript/gradle/root_immutables.gradle")
 apply from: rootProject.file("buildscript/gradle/root_springboot.gradle")
