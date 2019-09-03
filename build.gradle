@@ -1,11 +1,8 @@
-plugins {
-  id "java"
-}
-
 group 'com.github.sun'
 version = '1.0.0-SNAPSHOT'
 ext.rootName = "sun"
 ext.vers = [
+  jib            : '1.5.1',
   springboot     : '2.1.6.RELEASE',
   spring         : '5.1.8.RELEASE',
   mybatis        : '3.4.6',
@@ -31,6 +28,7 @@ ext.vers = [
   junit          : '4.12'
 ]
 
+apply from: rootProject.file("buildscript/gradle/root_jib.gradle")
 apply from: rootProject.file("buildscript/gradle/root_idea.gradle")
 apply from: rootProject.file("buildscript/gradle/root_maven.gradle")
 apply from: rootProject.file("buildscript/gradle/root_lombok.gradle")
