@@ -20,8 +20,7 @@ defineSubProject('demo-spring-bar', 'foundation/demo/spring/bar-server')
 defineSubProject('demo-spring-eureka', 'foundation/demo/spring/eureka-server')
 defineSubProject('demo-spring-zuul', 'foundation/demo/spring/zuul-server')
 
-defineSubProject('bridge-console-server', 'backend/bridge/console-server')
-defineSubProject('bridge-image-server', 'backend/bridge/image-server')
+defineSubProject('bridge-rest-server', 'backend/bridge/rest-server')
 
 defineSubProject('spider-rest', 'backend/spider/rest')
 defineSubProject('spider-service', 'backend/spider/service')
@@ -35,4 +34,6 @@ defineSubProject('image-rest', 'backend/image/rest')
 defineSubProject('image-spider', 'backend/image/spider')
 defineSubProject('image-service', 'backend/image/service')
 defineSubProject('image-contract', 'backend/image/contract')
+
+defineSubProject('console-rest', 'backend/console/rest')
 
