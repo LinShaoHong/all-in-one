@@ -5,6 +5,7 @@ ext.vers = [
   jib            : '1.5.1',
   springboot     : '2.1.6.RELEASE',
   spring         : '5.1.8.RELEASE',
+  jersey         : '2.27',
   mybatis        : '3.4.6',
   mybatis_spring : '2.0.2',
   jax_persistence: '1.0.2',
