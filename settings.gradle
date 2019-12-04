@@ -9,6 +9,7 @@ def defineSubProject(name, path) {
 defineSubProject('sql', 'foundation/common/sql')
 defineSubProject('boot', 'foundation/common/boot')
 defineSubProject('rest', 'foundation/common/rest')
+defineSubProject('modelling', 'foundation/common/modelling')
 defineSubProject('mybatis', 'foundation/common/mybatis')
 defineSubProject('quartz', 'foundation/common/quartz')
 defineSubProject('expression', 'foundation/common/expression')

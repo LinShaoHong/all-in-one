@@ -26,6 +26,7 @@ ext.vers = [
   htmlcleaner    : '2.22',
   classgraph     : '4.2.8',
   hanlp          : 'portable-1.7.4',
+  javapoet       : '1.11.1',
   junit          : '4.12'
 ]
 
