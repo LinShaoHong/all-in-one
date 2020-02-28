@@ -37,15 +37,15 @@ defineSubProject('image-contract', 'backend/image/contract')
 
 defineSubProject('console-rest', 'backend/console/rest')
 
-//defineSubProject('mall-admin-rest', 'backend/mall/admin/rest')
-//defineSubProject('mall-admin-service', 'backend/mall/admin/service')
-//defineSubProject('mall-admin-mapper', 'backend/mall/admin/mapper')
-//defineSubProject('mall-admin-contract', 'backend/mall/admin/contract')
-//
-//defineSubProject('mall-core-rest', 'backend/mall/core/rest')
-//defineSubProject('mall-core-service', 'backend/mall/core/service')
-//defineSubProject('mall-core-mapper', 'backend/mall/core/mapper')
-//defineSubProject('mall-core-contract', 'backend/mall/core/contract')
+defineSubProject('mall-admin-rest', 'backend/mall/admin/rest')
+defineSubProject('mall-admin-service', 'backend/mall/admin/service')
+defineSubProject('mall-admin-mapper', 'backend/mall/admin/mapper')
+defineSubProject('mall-admin-contract', 'backend/mall/admin/contract')
+
+defineSubProject('mall-core-rest', 'backend/mall/core/rest')
+defineSubProject('mall-core-service', 'backend/mall/core/service')
+defineSubProject('mall-core-mapper', 'backend/mall/core/mapper')
+defineSubProject('mall-core-contract', 'backend/mall/core/contract')
 
 
 
