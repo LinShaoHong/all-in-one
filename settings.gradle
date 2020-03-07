@@ -46,7 +46,7 @@ defineSubProject('mall-core-service', 'backend/mall/core/service')
 defineSubProject('mall-core-mapper', 'backend/mall/core/mapper')
 defineSubProject('mall-core-contract', 'backend/mall/core/contract')
 
-defineSubProject('bridge-rest-server', 'backend/bridge/rest-server')
+defineSubProject('bridge-image-server', 'backend/bridge/image-server')
 defineSubProject('bridge-mall-server', 'backend/bridge/mall-server')
 
 
