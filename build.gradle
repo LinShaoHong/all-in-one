@@ -28,6 +28,7 @@ ext.vers = [
   classgraph     : '4.2.8',
   hanlp          : 'portable-1.7.4',
   javapoet       : '1.11.1',
+  mail           : '1.6.2',
   junit          : '4.12'
 ]
 
