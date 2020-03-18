@@ -46,12 +46,12 @@ defineSubProject('mall-core-service', 'backend/mall/core/service')
 defineSubProject('mall-core-mapper', 'backend/mall/core/mapper')
 defineSubProject('mall-core-contract', 'backend/mall/core/contract')
 
-defineSubProject('xzyy-rest', 'backend/xzyy/rest')
-defineSubProject('xzyy-service', 'backend/xzyy/service')
-defineSubProject('xzyy-mapper', 'backend/xzyy/mapper')
-defineSubProject('xzyy-contract', 'backend/xzyy/contract')
+defineSubProject('qm-rest', 'backend/qm/rest')
+defineSubProject('qm-service', 'backend/qm/service')
+defineSubProject('qm-mapper', 'backend/qm/mapper')
+defineSubProject('qm-contract', 'backend/qm/contract')
 
-defineSubProject('bridge-xzyy-server', 'backend/bridge/xzyy-server')
+defineSubProject('bridge-qm-server', 'backend/bridge/qm-server')
 defineSubProject('bridge-image-server', 'backend/bridge/image-server')
 defineSubProject('bridge-mall-server', 'backend/bridge/mall-server')
 
