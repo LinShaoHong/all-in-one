@@ -46,12 +46,12 @@ defineSubProject('mall-core-service', 'backend/mall/core/service')
 defineSubProject('mall-core-mapper', 'backend/mall/core/mapper')
 defineSubProject('mall-core-contract', 'backend/mall/core/contract')
 
-defineSubProject('xfg-rest', 'backend/xfg/rest')
-defineSubProject('xfg-service', 'backend/xfg/service')
-defineSubProject('xfg-mapper', 'backend/xfg/mapper')
-defineSubProject('xfg-contract', 'backend/xfg/contract')
+defineSubProject('xzyy-rest', 'backend/xzyy/rest')
+defineSubProject('xzyy-service', 'backend/xzyy/service')
+defineSubProject('xzyy-mapper', 'backend/xzyy/mapper')
+defineSubProject('xzyy-contract', 'backend/xzyy/contract')
 
-defineSubProject('bridge-xfg-server', 'backend/bridge/xfg-server')
+defineSubProject('bridge-xzyy-server', 'backend/bridge/xzyy-server')
 defineSubProject('bridge-image-server', 'backend/bridge/image-server')
 defineSubProject('bridge-mall-server', 'backend/bridge/mall-server')
 
