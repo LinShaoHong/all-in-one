@@ -47,8 +47,9 @@ defineSubProject('mall-core-mapper', 'backend/mall/core/mapper')
 defineSubProject('mall-core-contract', 'backend/mall/core/contract')
 
 defineSubProject('qm-rest', 'backend/qm/rest')
-defineSubProject('qm-service', 'backend/qm/service')
 defineSubProject('qm-mapper', 'backend/qm/mapper')
+defineSubProject('qm-spider', 'backend/qm/spider')
+defineSubProject('qm-service', 'backend/qm/service')
 defineSubProject('qm-contract', 'backend/qm/contract')
 
 defineSubProject('bridge-qm-server', 'backend/bridge/qm-server')
