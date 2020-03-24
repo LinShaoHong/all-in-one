@@ -29,6 +29,7 @@ ext.vers = [
   hanlp          : 'portable-1.7.4',
   javapoet       : '1.11.1',
   mail           : '1.6.2',
+  jsch           : '0.1.55',
   junit          : '4.12'
 ]
 

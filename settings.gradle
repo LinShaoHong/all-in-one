@@ -21,9 +21,14 @@ defineSubProject('demo-spring-bar', 'foundation/demo/spring/bar-server')
 defineSubProject('demo-spring-eureka', 'foundation/demo/spring/eureka-server')
 defineSubProject('demo-spring-zuul', 'foundation/demo/spring/zuul-server')
 
-defineSubProject('spider-service', 'backend/spider/service')
 defineSubProject('spider-rest', 'backend/spider/rest')
+defineSubProject('spider-service', 'backend/spider/service')
 defineSubProject('spider-contract', 'backend/spider/contract')
+
+defineSubProject('scheduler-rest', 'backend/scheduler/rest')
+defineSubProject('scheduler-mapper', 'backend/scheduler/mapper')
+defineSubProject('scheduler-service', 'backend/scheduler/service')
+defineSubProject('scheduler-contract', 'backend/scheduler/contract')
 
 defineSubProject('layout-rest', 'backend/layout/rest')
 defineSubProject('layout-service', 'backend/layout/service')
@@ -50,6 +55,7 @@ defineSubProject('qm-mapper', 'backend/qm/mapper')
 defineSubProject('qm-spider', 'backend/qm/spider')
 defineSubProject('qm-service', 'backend/qm/service')
 defineSubProject('qm-contract', 'backend/qm/contract')
+defineSubProject('qm-scheduler', 'backend/qm/scheduler')
 
 defineSubProject('bridge-qm-server', 'backend/bridge/qm-server')
 defineSubProject('bridge-image-server', 'backend/bridge/image-server')
