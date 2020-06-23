@@ -2,7 +2,7 @@ group 'com.github.sun'
 version = '1.0.0-SNAPSHOT'
 ext.rootName = "sun"
 ext.vers = [
-  jib            : '2.1.0',
+  jib            : '2.4.0',
   springboot     : '2.1.6.RELEASE',
   spring         : '5.1.8.RELEASE',
   jax_rs_api     : '2.1',
