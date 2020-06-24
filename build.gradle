@@ -3,12 +3,12 @@ version = '1.0.0-SNAPSHOT'
 ext.rootName = "sun"
 ext.vers = [
   jib            : '2.4.0',
-  springboot     : '2.1.6.RELEASE',
-  spring         : '5.1.8.RELEASE',
+  springboot     : '2.1.10.RELEASE',
+  spring         : '5.1.11.RELEASE',
   jax_rs_api     : '2.1',
   jersey         : '2.27',
-  mybatis        : '3.4.6',
-  mybatis_spring : '2.0.2',
+  mybatis        : '3.5.5',
+  mybatis_spring : '2.0.5',
   jax_persistence: '1.0.2',
   springfox      : '2.7.0',
   swagger2       : '1.5.13',
