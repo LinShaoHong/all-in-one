@@ -59,7 +59,13 @@ defineSubProject('qm-service', 'backend/qm/service')
 defineSubProject('qm-contract', 'backend/qm/contract')
 defineSubProject('qm-scheduler', 'backend/qm/scheduler')
 
+defineSubProject('pn-rest', 'backend/pn/rest')
+defineSubProject('pn-mapper', 'backend/pn/mapper')
+defineSubProject('pn-service', 'backend/pn/service')
+defineSubProject('pn-contract', 'backend/pn/contract')
+
 defineSubProject('bridge-qm-server', 'backend/bridge/qm-server')
+defineSubProject('bridge-pn-server', 'backend/bridge/pn-server')
 defineSubProject('bridge-image-server', 'backend/bridge/image-server')
 defineSubProject('bridge-mall-server', 'backend/bridge/mall-server')
 defineSubProject('bridge-console-server', 'backend/bridge/console-server')

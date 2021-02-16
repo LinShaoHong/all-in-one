@@ -30,6 +30,7 @@ ext.vers = [
   javapoet       : '1.11.1',
   mail           : '1.6.2',
   jsch           : '0.1.55',
+  geoip2         : '2.14.0',
   junit          : '4.12'
 ]
 
