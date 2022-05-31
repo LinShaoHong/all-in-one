@@ -41,17 +41,6 @@ defineSubProject('image-spider', 'backend/image/spider')
 defineSubProject('image-service', 'backend/image/service')
 defineSubProject('image-contract', 'backend/image/contract')
 
-defineSubProject('mall-admin-rest', 'backend/mall/admin/rest')
-defineSubProject('mall-admin-mapper', 'backend/mall/admin/mapper')
-defineSubProject('mall-admin-service', 'backend/mall/admin/service')
-defineSubProject('mall-admin-resolver', 'backend/mall/admin/resolver')
-defineSubProject('mall-admin-contract', 'backend/mall/admin/contract')
-
-defineSubProject('mall-core-rest', 'backend/mall/core/rest')
-defineSubProject('mall-core-service', 'backend/mall/core/service')
-defineSubProject('mall-core-mapper', 'backend/mall/core/mapper')
-defineSubProject('mall-core-contract', 'backend/mall/core/contract')
-
 defineSubProject('qm-rest', 'backend/qm/rest')
 defineSubProject('qm-mapper', 'backend/qm/mapper')
 defineSubProject('qm-spider', 'backend/qm/spider')
@@ -61,7 +50,6 @@ defineSubProject('qm-scheduler', 'backend/qm/scheduler')
 
 defineSubProject('bridge-qm-server', 'backend/bridge/qm-server')
 defineSubProject('bridge-image-server', 'backend/bridge/image-server')
-defineSubProject('bridge-mall-server', 'backend/bridge/mall-server')
 defineSubProject('bridge-console-server', 'backend/bridge/console-server')
 
 
