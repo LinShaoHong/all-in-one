@@ -36,11 +36,6 @@ defineSubProject('layout-rest', 'backend/layout/rest')
 defineSubProject('layout-service', 'backend/layout/service')
 defineSubProject('layout-contract', 'backend/layout/contract')
 
-defineSubProject('image-rest', 'backend/image/rest')
-defineSubProject('image-spider', 'backend/image/spider')
-defineSubProject('image-service', 'backend/image/service')
-defineSubProject('image-contract', 'backend/image/contract')
-
 defineSubProject('qm-rest', 'backend/qm/rest')
 defineSubProject('qm-mapper', 'backend/qm/mapper')
 defineSubProject('qm-spider', 'backend/qm/spider')
