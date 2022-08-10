@@ -44,7 +44,6 @@ defineSubProject('qm-contract', 'backend/qm/contract')
 defineSubProject('qm-scheduler', 'backend/qm/scheduler')
 
 defineSubProject('bridge-qm-server', 'backend/bridge/qm-server')
-defineSubProject('bridge-image-server', 'backend/bridge/image-server')
 defineSubProject('bridge-console-server', 'backend/bridge/console-server')
 
 
