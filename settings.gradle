@@ -15,11 +15,11 @@ defineSubProject('quartz', 'foundation/common/quartz')
 defineSubProject('expression', 'foundation/common/expression')
 defineSubProject('test', 'foundation/common/test')
 
-defineSubProject('exercise-spring-rest', 'foundation/exercise/spring/rest-server')
-defineSubProject('exercise-spring-foo', 'foundation/exercise/spring/foo-server')
-defineSubProject('exercise-spring-bar', 'foundation/exercise/spring/bar-server')
-defineSubProject('exercise-spring-eureka', 'foundation/exercise/spring/eureka-server')
-defineSubProject('exercise-spring-zuul', 'foundation/exercise/spring/zuul-server')
+defineSubProject('exercise-spring-cloud-rest', 'foundation/exercise/spring-cloud/rest-server')
+defineSubProject('exercise-spring-cloud-foo', 'foundation/exercise/spring-cloud/foo-server')
+defineSubProject('exercise-spring-cloud-bar', 'foundation/exercise/spring-cloud/bar-server')
+defineSubProject('exercise-spring-cloud-eureka', 'foundation/exercise/spring-cloud/eureka-server')
+defineSubProject('exercise-spring-cloud-zuul', 'foundation/exercise/spring-cloud/zuul-server')
 
 defineSubProject('common-service', 'backend/common/service')
 
