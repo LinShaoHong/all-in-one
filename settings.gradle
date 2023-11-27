@@ -1,9 +1,9 @@
 rootProject.name = 'sun'
 
 def defineSubProject(name, path) {
-  String prjName = "sun-$name"
-  include(prjName)
-  project(":$prjName").projectDir = file(path)
+    String prjName = "sun-$name"
+    include(prjName)
+    project(":$prjName").projectDir = file(path)
 }
 
 defineSubProject('sql', 'foundation/common/sql')
@@ -14,20 +14,6 @@ defineSubProject('mybatis', 'foundation/common/mybatis')
 defineSubProject('quartz', 'foundation/common/quartz')
 defineSubProject('expression', 'foundation/common/expression')
 defineSubProject('test', 'foundation/common/test')
-
-defineSubProject('exercise-spring-cloud-rest', 'foundation/exercise/spring-cloud/rest-server')
-defineSubProject('exercise-spring-cloud-foo', 'foundation/exercise/spring-cloud/foo-server')
-defineSubProject('exercise-spring-cloud-bar', 'foundation/exercise/spring-cloud/bar-server')
-defineSubProject('exercise-spring-cloud-eureka', 'foundation/exercise/spring-cloud/eureka-server')
-defineSubProject('exercise-spring-cloud-zuul', 'foundation/exercise/spring-cloud/zuul-server')
-
-defineSubProject('exercise-algorithm-array', 'foundation/exercise/algorithm/array')
-defineSubProject('exercise-algorithm-graph', 'foundation/exercise/algorithm/graph')
-defineSubProject('exercise-algorithm-hash', 'foundation/exercise/algorithm/hash')
-defineSubProject('exercise-algorithm-queue', 'foundation/exercise/algorithm/queue')
-defineSubProject('exercise-algorithm-stack', 'foundation/exercise/algorithm/stack')
-defineSubProject('exercise-algorithm-string', 'foundation/exercise/algorithm/string')
-defineSubProject('exercise-algorithm-tree', 'foundation/exercise/algorithm/tree')
 
 defineSubProject('common-service', 'backend/common/service')
 
@@ -53,6 +39,24 @@ defineSubProject('qm-scheduler', 'backend/qm/scheduler')
 
 defineSubProject('bridge-qm-server', 'backend/bridge/qm-server')
 defineSubProject('bridge-console-server', 'backend/bridge/console-server')
+
+defineSubProject('exercise-spring-cloud-rest', 'foundation/exercise/spring-cloud/rest-server')
+defineSubProject('exercise-spring-cloud-foo', 'foundation/exercise/spring-cloud/foo-server')
+defineSubProject('exercise-spring-cloud-bar', 'foundation/exercise/spring-cloud/bar-server')
+defineSubProject('exercise-spring-cloud-eureka', 'foundation/exercise/spring-cloud/eureka-server')
+defineSubProject('exercise-spring-cloud-zuul', 'foundation/exercise/spring-cloud/zuul-server')
+
+defineSubProject('exercise-algorithm-array', 'foundation/exercise/algorithm/array')
+defineSubProject('exercise-algorithm-graph', 'foundation/exercise/algorithm/graph')
+defineSubProject('exercise-algorithm-hash', 'foundation/exercise/algorithm/hash')
+defineSubProject('exercise-algorithm-queue', 'foundation/exercise/algorithm/queue')
+defineSubProject('exercise-algorithm-stack', 'foundation/exercise/algorithm/stack')
+defineSubProject('exercise-algorithm-string', 'foundation/exercise/algorithm/string')
+defineSubProject('exercise-algorithm-tree', 'foundation/exercise/algorithm/tree')
+
+defineSubProject('exercise-flow-flowable', 'foundation/exercise/flow/flowable')
+defineSubProject('exercise-flow-activiti', 'foundation/exercise/flow/activiti')
+
 
 
 
