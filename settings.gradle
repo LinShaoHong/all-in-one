@@ -37,6 +37,11 @@ defineSubProject('qm-service', 'backend/qm/service')
 defineSubProject('qm-contract', 'backend/qm/contract')
 defineSubProject('qm-scheduler', 'backend/qm/scheduler')
 
+defineSubProject('sms-rest', 'backend/sms/rest')
+defineSubProject('sms-mapper', 'backend/sms/mapper')
+defineSubProject('sms-service', 'backend/sms/service')
+defineSubProject('sms-contract', 'backend/sms/contract')
+
 defineSubProject('squirrel-rest', 'backend/squirrel/rest')
 defineSubProject('squirrel-mapper', 'backend/squirrel/mapper')
 defineSubProject('squirrel-service', 'backend/squirrel/service')
