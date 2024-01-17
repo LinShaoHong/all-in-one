@@ -49,6 +49,7 @@ defineSubProject('squirrel-contract', 'backend/squirrel/contract')
 defineSubProject('squirrel-scheduler', 'backend/squirrel/scheduler')
 
 defineSubProject('bridge-qm-server', 'backend/bridge/qm-server')
+defineSubProject('bridge-sms-server', 'backend/bridge/sms-server')
 defineSubProject('bridge-console-server', 'backend/bridge/console-server')
 defineSubProject('bridge-squirrel-server', 'backend/bridge/squirrel-server')
 
@@ -68,8 +69,6 @@ defineSubProject('exercise-algorithm-tree', 'foundation/exercise/algorithm/tree'
 
 defineSubProject('exercise-flow-flowable', 'foundation/exercise/flow/flowable')
 defineSubProject('exercise-flow-activiti', 'foundation/exercise/flow/activiti')
-
-
 
 
 
