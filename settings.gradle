@@ -42,6 +42,11 @@ defineSubProject('sms-mapper', 'backend/sms/mapper')
 defineSubProject('sms-service', 'backend/sms/service')
 defineSubProject('sms-contract', 'backend/sms/contract')
 
+defineSubProject('card-rest', 'backend/card/rest')
+defineSubProject('card-mapper', 'backend/card/mapper')
+defineSubProject('card-service', 'backend/card/service')
+defineSubProject('card-contract', 'backend/card/contract')
+
 defineSubProject('squirrel-rest', 'backend/squirrel/rest')
 defineSubProject('squirrel-mapper', 'backend/squirrel/mapper')
 defineSubProject('squirrel-service', 'backend/squirrel/service')
@@ -50,6 +55,7 @@ defineSubProject('squirrel-scheduler', 'backend/squirrel/scheduler')
 
 defineSubProject('bridge-qm-server', 'backend/bridge/qm-server')
 defineSubProject('bridge-sms-server', 'backend/bridge/sms-server')
+defineSubProject('bridge-card-server', 'backend/bridge/card-server')
 defineSubProject('bridge-console-server', 'backend/bridge/console-server')
 defineSubProject('bridge-squirrel-server', 'backend/bridge/squirrel-server')
 
