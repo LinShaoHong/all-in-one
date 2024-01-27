@@ -11,8 +11,6 @@ ext.vers = [
   mybatis        : '3.5.5',
   mybatis_spring : '2.0.5',
   jax_persistence: '1.0.2',
-  springfox      : '2.7.0',
-  swagger2       : '1.5.13',
   antlr4         : '4.7.1',
   immutables     : '2.6.3',
   jackson        : '2.9.9',
@@ -39,6 +37,5 @@ apply from: rootProject.file("buildscript/gradle/root_jib.gradle")
 apply from: rootProject.file("buildscript/gradle/root_idea.gradle")
 apply from: rootProject.file("buildscript/gradle/root_maven.gradle")
 apply from: rootProject.file("buildscript/gradle/root_lombok.gradle")
-apply from: rootProject.file("buildscript/gradle/root_swagger.gradle")
 apply from: rootProject.file("buildscript/gradle/root_validation.gradle")
 apply from: rootProject.file("buildscript/gradle/root_springboot.gradle")
