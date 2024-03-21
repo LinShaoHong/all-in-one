@@ -37,11 +37,6 @@ defineSubProject('qm-service', 'backend/qm/service')
 defineSubProject('qm-contract', 'backend/qm/contract')
 defineSubProject('qm-scheduler', 'backend/qm/scheduler')
 
-defineSubProject('sms-rest', 'backend/sms/rest')
-defineSubProject('sms-mapper', 'backend/sms/mapper')
-defineSubProject('sms-service', 'backend/sms/service')
-defineSubProject('sms-contract', 'backend/sms/contract')
-
 defineSubProject('card-rest', 'backend/card/rest')
 defineSubProject('card-mapper', 'backend/card/mapper')
 defineSubProject('card-service', 'backend/card/service')
