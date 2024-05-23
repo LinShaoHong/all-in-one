@@ -6,6 +6,7 @@ def defineSubProject(name, path) {
   project(":$prjName").projectDir = file(path)
 }
 
+defineSubProject('ai', 'foundation/common/ai')
 defineSubProject('sql', 'foundation/common/sql')
 defineSubProject('boot', 'foundation/common/boot')
 defineSubProject('rest', 'foundation/common/rest')
