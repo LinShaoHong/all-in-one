@@ -67,9 +67,3 @@ defineSubProject('exercise-algorithm-queue', 'foundation/exercise/algorithm/queu
 defineSubProject('exercise-algorithm-stack', 'foundation/exercise/algorithm/stack')
 defineSubProject('exercise-algorithm-string', 'foundation/exercise/algorithm/string')
 defineSubProject('exercise-algorithm-tree', 'foundation/exercise/algorithm/tree')
-
-defineSubProject('exercise-flow-flowable', 'foundation/exercise/flow/flowable')
-defineSubProject('exercise-flow-activiti', 'foundation/exercise/flow/activiti')
-
-
-
