@@ -22,7 +22,6 @@ ext.vers = [
         guava          : '28.0-jre',
         jpinyin        : '1.1.8',
         quartz         : '2.3.1',
-        htmlcleaner    : '2.22',
         classgraph     : '4.2.8',
         hanlp          : 'portable-1.7.4',
         javapoet       : '1.11.1',
