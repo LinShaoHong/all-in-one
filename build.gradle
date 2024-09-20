@@ -29,7 +29,7 @@ ext.vers = [
         jsch           : '0.1.55',
         geoip2         : '2.14.0',
         caffeine       : '3.1.8',
-        dashscope      : '2.14.4',
+        dashscope      : '2.16.4',
         junit          : '4.12'
 ]
 
